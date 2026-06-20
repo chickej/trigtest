@@ -11,10 +11,31 @@ public class trigtest {
 			"What is sin 60?",
 		};
 
+		double[] answers = {
+			0.0,
+			0.5,
+			Math.sqrt(3) / 2
+		};
+
 		Random random = new Random();
 		int randomIndex = random.nextInt(statements.length);
 		String selectedStatement = statements[randomIndex];
 
 		System.out.println(selectedStatement);
+		double userAnswer = Integer.valueOf(scanner.nextInt());
+
+		if (userAnswer == answers[randomIndex]) {
+			System.out.println("correct");
+		} else {
+			System.out.println("incorrect. the answer is: " + answers[randomIndex]);
+		}
+
+		/* if (Math.abs(userAnswer - answers[randomIndex]) < 0.001) {
+			System.out.println("correct");
+		} else {
+			System.out.println("incorrect. the answer is: " + answers[randomIndex]);
+		} */
+
+		scanner.close();
 	}
 }
