@@ -9,12 +9,14 @@ public class trigtest {
 			"What is sin 0?",
 			"What is sin 30?",
 			"What is sin 60?",
+			"What is cos 0?",
 		};
 
 		double[] answers = {
 			0.0,
 			0.5,
-			Math.sqrt(3) / 2
+			Math.sqrt(3) / 2,
+			1,
 		};
 
 		Random random = new Random();
